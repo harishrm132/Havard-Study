@@ -1,17 +1,17 @@
 def main():
-    larger = {
+    larger_box = {
         "x1" : 0,
         "y1" : 0,
         "x2" : 50,
         "y2" : 50
     }
-    smaller = {
+    smaller_box = {
         "x1" : -10,
         "y1" : 10,
         "x2" : 60,
         "y2" : 20
     }
-    print(get_overlap_perc(larger, smaller)) 
+    print(get_overlap_perc(larger_box, smaller_box)) 
 
 def get_overlap_perc(larger, smaller):
     """
