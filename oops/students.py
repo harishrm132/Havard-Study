@@ -1,8 +1,6 @@
 
 class Student:
     def __init__(self, name, house, patrnous):
-        if not name:
-            raise ValueError("Missing Name")
         self.name = name
         self.house = house
         self.patrnous = patrnous
@@ -22,10 +20,34 @@ class Student:
 
     def __repr__(self) -> str:
         pass
+    
+    @property
+    def name(self):
+        return self._name
 
+    @name.setter
+    def name(self, name):
+        if not name:
+            raise ValueError("Missing Name")
+        self._name = name
+
+    # Getter
+    @property
+    def house(self):
+        return self._house
+    
+    @house.setter
+    # Setter
+    def house(self, house):
+        if house not in ["Gryffindor", "HufflePuff", "RavenClaw", "Slytherin"]:
+            raise ValueError("Invalid House")
+        self._house = house
+
+# _ means private
 
 def main():
     student = get_student()
+    # student.house = "NumberFour"
     print(f"{student.name} from {student.house}")
     print("Exceptco petronum!!!")
     print(student.charm())
