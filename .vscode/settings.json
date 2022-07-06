@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "sqlite:///shows.db",
+            "database": "${workspaceFolder:Python _ havard}/python/sql/IMDB/shows.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
